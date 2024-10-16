@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name="URL" value="qaclickacademy.com"/>
+	<listeners>
+		<listener class-name="test.Listeners"></listener>
+	</listeners>
+  <test name="Test">
+	  <parameter name="URL1" value="carloan.com"/>
+    <classes>
+      <class name="testNG.day2"/>
+      <class name="testNG.day1">
+		  
+		  <methods>
+			  <include name="test1"></include>
+		  </methods>
+		  </class>
+    </classes>
+    </test>
+    
+ <test name="Test2">
+	 <parameter name="URL2" value="homeloancom"/>
+	 <parameter name="URL3" value="homeloancom/extended"/>
+    <classes>
+      <class name="testNG.CarLoan">
+      <methods>
+		  <exclude name="mobileLoginCar"></exclude>
+	  </methods>
+		  
+      </class>
+
+    </classes> 
+  </test> 
+</suite> 
